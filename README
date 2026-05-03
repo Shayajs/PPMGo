@@ -1,8 +1,8 @@
-# PPMGo 🎨
+# PPMGo
 
 **PPMGo** est un outil en ligne de commande (CLI) écrit en Go, conçu pour manipuler le format d'image **PPM** (Portable PixMap) et servir de pont entre différents formats d'image (JPG, PNG). Il inclut des moteurs de génération de textures procédurales utilisant la puissance des **Goroutines**.
 
-## 🚀 Fonctionnalités
+## Fonctionnalités
 
 *   **Conversion Multi-format** : Convertissez vos fichiers entre JPG, PNG et PPM en un clin d'œil.
 *   **Génération Procédurale** :
@@ -12,7 +12,7 @@
 *   **Performance & Concurrence** : Utilisation de `sync.WaitGroup` et de `channels` pour générer les images en parallèle tout en affichant une barre de progression en temps réel.
 *   **Optimisation I/O** : Écriture bufferisée via `bufio` pour gérer des images de très haute résolution (ex: 5000x5000) sans ralentissement[cite: 1, 2].
 
-## 🛠️ Installation
+## Installation
 
 1. Assurez-vous d'avoir [Go](https://golang.org/dl/) installé (version 1.20+ recommandée).
 2. Clonez le dépôt :
@@ -26,7 +26,7 @@
    go build -o ppmgo .
    ```
 
-## 📖 Utilisation
+## Utilisation
 
 Le programme s'utilise avec des "flags" (drapeaux) pour définir les dimensions et les formats de sortie.
 
@@ -52,7 +52,7 @@ Passez simplement le fichier source en argument :
 ./ppmgo logo.png --ppm logo.ppm
 ```
 
-## ⚙️ Détails des Flags
+## Détails des Flags
 
 | Flag | Description | Défaut |
 | :--- | :--- | :--- |
@@ -65,7 +65,7 @@ Passez simplement le fichier source en argument :
 | `--jpg`     | Chemin de sortie pour le format JPG | `""` |
 | `--ppm`     | Chemin de sortie pour le format PPM | `""` |
 
-## 🏗️ Architecture Technique
+## Architecture Technique
 
 Le projet repose sur une structure modulaire :
 *   **`main.go`** : Point d'entrée, gestion des arguments et orchestration des tâches.
@@ -76,5 +76,5 @@ Le projet repose sur une structure modulaire :
 
 ---
 
-### 📝 À propos
+### À propos
 Développé dans le cadre d'une exploration des capacités de concurrence de Go (Goroutines/Channels) et de la manipulation binaire de fichiers image.
